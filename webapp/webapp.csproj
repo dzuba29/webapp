@@ -135,6 +135,10 @@
     <Compile Include="Migrations\201907201426076_InitialCreate.Designer.cs">
       <DependentUpon>201907201426076_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907201440346_ProductProcedure.cs" />
+    <Compile Include="Migrations\201907201440346_ProductProcedure.Designer.cs">
+      <DependentUpon>201907201440346_ProductProcedure.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\webappContext.cs" />
@@ -201,6 +205,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201907201426076_InitialCreate.resx">
       <DependentUpon>201907201426076_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907201440346_ProductProcedure.resx">
+      <DependentUpon>201907201440346_ProductProcedure.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

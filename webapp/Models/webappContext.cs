@@ -20,5 +20,11 @@ namespace webapp.Models
         }
 
         public System.Data.Entity.DbSet<webapp.Models.Product> Products { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Product>().MapToStoredProcedures();
+        }
+
     }
 }

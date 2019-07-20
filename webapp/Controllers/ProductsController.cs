@@ -7,12 +7,18 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using webapp.Models;
+using System.Diagnostics;
 
 namespace webapp.Controllers
 {
     public class ProductsController : Controller
     {
         private webappContext db = new webappContext();
+
+        public ProductsController()
+        {
+            db.Database.Log = SqlQ => Debug.Write(SqlQ);
+        }
 
         // GET: Products
         public ActionResult Index()

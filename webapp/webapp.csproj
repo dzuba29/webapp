@@ -136,7 +136,7 @@
       <DependentUpon>201907201426076_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Class1.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Models\webappContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

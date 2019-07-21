@@ -20,9 +20,11 @@ namespace webapp.Controllers
             db.Database.Log = SqlQ => Debug.Write(SqlQ);
         }
 
-        public ActionResult IndexTable()
+        public ActionResult IndexTable(string SearchString)
         {
-            return PartialView(db.Products.ToList());
+            var SearchQ = db.Products.Where(p => p.FullName.Contains(SearchString));
+            return PartialView(SearchQ.ToList());
+            //return View(db.Products.ToList());
         }
         // GET: Products
         public ActionResult Index()

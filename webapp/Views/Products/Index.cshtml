@@ -1,18 +1,14 @@
 ﻿@{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Products";
 }
 
-<h2>Index</h2>
-
-@*<p>
-    @Html.ActionLink("Create New", "Create")
-</p>*@
+<h2>Products</h2>
 
 <div>
     @using (Ajax.BeginForm("IndexTable", new AjaxOptions { UpdateTargetId = "results" }))
     {
-        <input type="text" name="name" />
-        <input type="submit" value="Поиск" />
+        <input type="text" name="SearchString" />
+        <input type="submit" value="Search" />
     }
     <div id="results"></div>
 </div>

@@ -20,6 +20,10 @@ namespace webapp.Controllers
             db.Database.Log = SqlQ => Debug.Write(SqlQ);
         }
 
+        public ActionResult IndexTable()
+        {
+            return PartialView(db.Products.ToList());
+        }
         // GET: Products
         public ActionResult Index()
         {

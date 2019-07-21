@@ -1,0 +1,56 @@
+﻿
+@model IEnumerable<webapp.Models.Product>
+
+<table class="table">
+    <tr>
+        <th>
+            Short name
+        </th>
+        <th>
+            Full name
+        </th>
+        <th>
+            Shelf number
+        </th>
+        <th>
+            Weight
+        </th>
+        <th>
+            Date in
+        </th>
+        <th>
+            Date out
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.ShortName
+            </td>
+            <td>
+                @item.FullName
+            </td>
+            <td>
+                @item.ShelfNumber
+            </td>
+            <td>
+                @item.Weight
+            </td>
+            <td>
+                @item.DateIn
+            </td>
+            <td>
+                @item.DateOut
+            </td>
+            <td>
+                    @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            </td>
+        </tr>
+    }
+
+</table>
